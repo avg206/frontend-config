@@ -1,7 +1,6 @@
-// eslint config
+// eslint common config
 
 module.exports = {
-  parser: "babel-eslint",
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -13,23 +12,32 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true,
-    "jest/globals": true
+    node: true
   },
   rules: {
     "prefer-const": "warn",
-    "react/prop-types": [
-      "warn",
-      {
-        ignore: ["dispatch"]
-      }
-    ],
     "no-unused-vars": ["error", { ignoreRestSiblings: true }],
     "react/jsx-no-target-blank": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/no-unescaped-entities": 0
   },
-  globals: {
-    __REVISION__: false
-  }
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
+  overrides: [
+    {
+      files: ["**/*.{test,spec}.{js,jsx,ts,tsx}"],
+      env: {
+        jest: true,
+        "jest/globals": true
+      },
+      plugins: ["jest", "testing-library"],
+      extends: ["plugin:testing-library/react"],
+      rules: {
+        "@typescript-eslint/ban-ts-ignore": 0
+      }
+    }
+  ]
 };
