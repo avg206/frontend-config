@@ -16,7 +16,7 @@ module.exports = {
   },
   rules: {
     "prefer-const": "warn",
-    "no-unused-vars": ["error", { ignoreRestSiblings: true }],
+    "no-unused-vars": ["warn", { ignoreRestSiblings: true }],
     "react/jsx-no-target-blank": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/no-unescaped-entities": 0
