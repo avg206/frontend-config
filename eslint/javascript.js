@@ -6,6 +6,10 @@ const common = require('./index');
 module.exports = merge(
   {
     parser: 'babel-eslint',
+    parserOptions: {
+      sourceType: 'module',
+      allowImportExportEverywhere: true,
+    },
   },
   common
 );
