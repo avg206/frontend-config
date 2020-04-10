@@ -1,6 +1,6 @@
 {
   "name": "@avg206/frontend-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ESLint and Prettier configuration",
   "repository": "avg206/frontend-config",
   "author": "Anatoli Huseu <avg.tolik@gmail.com>",
