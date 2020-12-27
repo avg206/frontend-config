@@ -1,5 +1,5 @@
 // eslint config for react native projects
-const { merge } = require('../utils')
+const { merge } = require('../utils');
 
 const base = require('./base');
 const baseJavascript = require('./base_javascript');
@@ -8,6 +8,10 @@ const baseTests = require('./base_tests');
 
 module.exports = merge(base, {
   plugins: ['module-resolver'],
+  env: {
+    es6: true,
+    node: true,
+  },
 
   rules: {
     'no-console': 'error',
